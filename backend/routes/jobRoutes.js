@@ -3,7 +3,7 @@ const router = express.Router();
 
 const { createJob, getJobs, getJobById } = require("../controllers/jobController");
 const protect = require("../middleware/authMiddleware");
-const authorizeRoles = require("../middleware/roleMiddleware");
+const authorizeRoles = require("../middleware/rolemiddleware");
 
 // Create Job (Recruiter/Admin only)
 router.post("/", protect, authorizeRoles("recruiter", "admin"), createJob);

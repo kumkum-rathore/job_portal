@@ -10,7 +10,7 @@ const {
 } = require("../controllers/applicationController");
 
 const protect = require("../middleware/authMiddleware");
-const authorizeRoles = require("../middleware/roleMiddleware");
+const authorizeRoles = require("../middleware/rolemiddleware");
 const upload = require("../middleware/uploadMiddleware");
 
 // 1. Apply job (Candidate only)
