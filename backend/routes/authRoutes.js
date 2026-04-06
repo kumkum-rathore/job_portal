@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const { registerUser, loginUser } = require("../controllers/authController");
 const protect = require("../middleware/authMiddleware");
-const authorizeRoles = require("../middleware/roleMiddleware");
+const authorizeRoles = require("../middleware/rolemiddleware");
 
 router.get("/profile", protect, (req, res) => {
   res.json(req.user);
