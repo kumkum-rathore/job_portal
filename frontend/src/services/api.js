@@ -6,7 +6,8 @@ import axios from "axios";
 const API = axios.create({
   // Agar environment variable milta hai toh wo use karega, 
   // nahi toh local use karega (development ke liye)
-  baseURL: import.meta.env.VITE_API_URL || "http://localhost:5000/api",
+  baseURL:`${import.meta.env.VITE_API_URL}/api`,
+  
 });
 // Ye function hum LoadingContext se pass karenge (Step 3 dekho)
 export const setupInterceptors = (setLoading) => {
